@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, memo } from 'react';
 import useToggleState from './hooks/useToggleState';
 import EditTodoForm from './EditTodoForm';
 
@@ -48,4 +48,4 @@ function Todo({ id, task, completed }) {
     </ListItem>
   )
 }
-export default Todo;
+export default memo(Todo);
