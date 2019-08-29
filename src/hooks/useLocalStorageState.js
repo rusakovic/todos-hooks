@@ -3,14 +3,14 @@ import {useState, useEffect} from 'react'
  function useLocalStorageState(key, defaultVal) {
   // make piece of state, based off of value in localstorage (or default)
   const [state, setState] = useState(() => {
-    let val;
+    let value;
     try {
-      val = JSON.parse(window.localStorage.getItem(key) || String(defaultVal) )
+      value = JSON.parse(window.localStorage.getItem(key) || String(defaultVal) )
     }
     catch (e) {
-      val = defaultVal;
+      value = defaultVal;
     }
-    return val;
+    return value;
   });
 
   // use useEffect to update localstorage when state changes
