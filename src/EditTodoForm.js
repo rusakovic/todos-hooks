@@ -7,6 +7,7 @@ import { TodosContext } from './context/todos.conext';
 function EditTodoForm({ id, task, toggleEditForm }) {
   const { editTodo } = useContext(TodosContext);
   const [value, handleChange, reset] = useInputState(task);
+  console.log('edit from render')
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
